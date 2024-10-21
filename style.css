@@ -1,27 +1,96 @@
+/* Estilos de header */
 
-img{
-    width: 50%;
+body{
+    background-color: black;
 }
 
-body {
-    background-color: darkgrey;
-}
-
-.other-image{
-    text-align: center;
-}
-
-.title {
+article{
+    margin-bottom: 5%;
     color: white;
-    text-align: center;
-    text-decoration-color: white;
 }
 
-.notes{
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-top: 1%;
+footer{
+    background-color: rgb(25, 90, 25);
+    display: block;
+}
+
+.sec-title{
     text-align: center;
-    background-color: white;
-    color: black;
+    padding: 10px;
+}
+
+#planes {
+    display: inline-flex;
+    text-align: right;
+}
+
+.artcl-content{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#contenido {
+    display: inline-flex;
+    text-align: left;
+}
+
+.espacio{
+    display: inline;
+    padding-right: 25%;
+    padding-right: -10%;
+    background-color: rgb(30, 185, 60);
+}
+
+#description{
+    margin-top: 10%;
+    text-align: center;
+    color: white;
+    
+}
+
+.line{
+    background-color: rgb(30, 185, 60);
+    margin: 20px;
+    padding: 3px;
+}
+
+#about-me{
+    color: aquamarine;
+    padding: 2%;
+    background-color: rgb(20, 20, 20);
+    border-color: gray;
+    border-style: double;
+}
+
+#page_name {
+    display: inline;
+}
+
+.logotip {
+    display: block;
+    padding-top: 1.5%;
+}
+
+.logo {
+    width: 10%;
+    border-radius: 100%;
+    text-align: left;
+}
+
+nav {
+    display: block;
+    text-align: right;
+    margin-top: -8%;
+}
+
+li {
+    display: inline;
+    padding: 2%;
+    text-align: center;
+}
+
+header {
+    background-color:rgb(65, 235, 160);
+    padding-bottom: 15%;
+    margin: -1.28%;
 }
