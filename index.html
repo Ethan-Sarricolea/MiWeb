@@ -6,6 +6,8 @@
         <title>Mi web</title>
         <!-- Importar Bootstrap desde la CDN -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     </head>
     <body>
 
@@ -14,48 +16,242 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Mi Logo" class="d-inline-block align-text-top" style="height: 50px;">
+                    <img src="https://avatars.githubusercontent.com/u/144255690?v=4" alt="Mi Logo" class="d-inline-block align-text-top" style="height: 50px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="src\pages\proyectos.html">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="src\pages\conocimientos.html">Conocimientos</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        <!-- Información de la pagina -->
         <main>
-            <section id="about-me">
-                <h1>Sobre mi</h1>
-                <p>Hola Soy pepe</p>
+            <!-- About me -->
+            <section id="about-me" class="container">
+                <h1 style="color: rgb(73, 76, 209); text-align: center; padding-top: 20px;">Sobre mi</h1>
+                <p>
+                    ¡Hola!, me llamo Ethan y actualmente soy estudiante de ingeniería de software en
+                    la Universidad Veracruzana; Hace no mucho comenzo mi pasion por la tecnología, por lo que
+                    hago este sitio web personal para poner a prueba mis conocimientos y si es posible compartirlos
+                    con aquellos que esten adentrandose en este extenso mundo de la tecnología.
+                </p>
+                <div style="text-align: right; list-style-position: inside;">
+                    <h3 style="background-color: rgb(191, 191, 191);">Gustos / intereses</h3>
+                    <p>
+                        <ul >
+                            <li>
+                                <b>Desarrollo de videojuegos</b>
+                                <p>
+                                    Espero aprender mas acerca del desarrollo de videojuegos y formar parte de
+                                    la mayor parte de los procesos de desarrollo de estos.
+                                </p>
+                            </li>
+                            <li>
+                                <b>Ciberseguridad - Haking etico</b>
+                                <p>
+                                    Sin duda la seguridad en la tecnología es algo muy importante, por lo que 
+                                    conocer los metodos y herramientas tanto de ataque como de defensa en la seguridad
+                                    cibernetica me parece sumamente importante e interesante.
+                                </p>
+                            </li>
+                            <li>
+                                <b>Diseño / dibujo</b>
+                                <p>
+                                    Crear es una de mis mas grandes pasiones, por lo que realizar diseños, dibujos o cualquier
+                                    actividad relacionada con el contenido audiovisual suele ser llamativa para mi.
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+                <!-- Aspiraciones -->
+                <div style="text-align: left;">
+                    <h3 style="background-color: rgb(150,150,150);">Aspiraciones</h3>
+                    <p>
+                        Ya que estoy en mi proceso de aprendizaje, aun estoy en la busqueda
+                        del area en la que desempeñarme principalmente, pero estos son algunas de
+                        mis metas a medio / largo plazo.
+                    </p>
+                    <h5 style="text-align: center;">Desarrollar un juego Indie</h5>
+                    <p style="text-align: center;">(En proceso)</p>
+                    <h5 style="text-align: center;">Desarrollar software en una empresa</h5>
+                    <p style="text-align: center;">(Aun un poco lejos pero en proceso)</p>
+
+                </div>
+                <div class="container" style="text-align: right; padding-top: 30px; padding-bottom: 30px; text-align: right; list-style-position: inside;">
+                    <h3 style="background-color: rgb(120, 120, 120);">Habilidades blandas</h3>
+                    <ul>
+                        <li>
+                            <b>Curiosidad</b>
+                            <p>Considero a la curiosidad clave para el aprendizaje constante</p>
+                        </li>
+                        <li>
+                            <b>Paciencia</b>
+                            <p>
+                                "La paciencia es una virtud". Sin duda fundamental en la solución
+                                de los problemas complejos que puede conllevar la programación.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
             </section>
-            <section>
-                <h1>Habilidades</h1>
-                <ul>
-                    <li>JavaScript (React, Node.js)</li>
-                    <li>Diseño web (HTML, CSS, Bootstrap)</li>
-                    <li>Gestión de proyectos (Agile, Scrum)</li>
+            <!-- Conocimientos -->
+            <section class="container-fluid" style="text-align: center; padding-top: 30px;">
+                <h1 style="color: rgb(73, 76, 209);">Conocimientos</h1>
+                <ul style="list-style-type: none;">
+                    <li>Control de versiones (Git y GitHub)</li>
+                    <li>Programación Orientada a Objetos (POO)</li>
+                    <li>Estructuras de datos</li>
+                    <li>Levantamiento de requisitos (ERS)</li>
                 </ul>
+                <div class="text-center">
+                    <a href="src/pages/conocimientos.html" target="_blank" class="btn btn-blue btn-lg" style="background-color: rgb(101, 173, 232);">
+                        Ver mas...
+                    </a>
+                </div>
             </section>
-            <section>
-                <h1>Proyectos</h1>
-                <ul>
-                    <li>
-                        <a href="https://github.com/miusuario/proyecto1" target="_blank">Proyecto 1</a>
-                        <p>Descripción breve de lo que hace este proyecto.</p>
-                    </li>
-                    <li>
-                        <a href="https://github.com/miusuario/proyecto2" target="_blank">Proyecto 2</a>
-                        <p>Descripción breve de lo que hace este proyecto.</p>
-                    </li>
-                </ul>
+            <!-- Herramientas -->
+            <section class="container" style="padding-bottom: 30px; padding-top: 30px;">
+                <h1 style="text-align: center; color: rgb(73, 76, 209); padding-top: 20px;">Herramientas</h1>
+                <p>
+                    Enlistare algunas de las tecnologias / herramientas que he utilizado y que <b>considero</b>
+                    que me encuentro, actualizare la tabla de acorde a mis conocimientos mas fuertes, pero
+                    habra un acceso a todas las tecnologias de las cuales he aprendido y tenga apuntes.
+                </p>
+                <table class="table">
+                    <tr>
+                        <td><h5>Tecnología / herramienta</h5></td>
+                        <td><h5>Nivel</h5></td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Python</a></td>
+                        <td>Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Java</a></td>
+                        <td>Basico / Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td><a href="">JavaScript</a></td>
+                        <td>Basico / Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td><a href="">C y C++</a></td>
+                        <td>Basico</td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Dart</a></td>
+                        <td>Basico</td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Bases de datos (SQL)</a></td>
+                        <td>Basico / Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td><a href="">Diseño web (HTML, CSS, Bootstrap)</a></td>
+                        <td>Basico</td>
+                    </tr>
+                </table>
+                <div class="text-center">
+                    <button onclick="alert('En desarrollo')" target="_blank" class="btn btn-blue btn-lg" style="background-color:rgb(101, 173, 232);">
+                        Ver mas...
+                    </a>
+                </div>
+            </section>
+            <!-- Proyectos -->
+            <section class="container">
+                <div class="row">
+                    <h1 style="text-align: center; color: rgb(73, 76, 209); margin-bottom: 30px;">Proyectos</h1>
+                    <ul>
+                        <li style="margin-bottom: 30px;">
+                            <a href="src\pages\proyectos\mazmorras.html">
+                                <h3 style="color: rgb(52, 59, 87);">Generador de mazmorras aleatorias</h3>
+                            </a>
+                            <p>
+                                Proyecto escolar que genera mazmorras (representadas en grafos) con un numero
+                                de salas repartidas y conectadas de forma aleatoria, <a href="src\pages\proyectos\mazmorras.html">ver mas...</a>
+                            </p>
+                            <div class="text-center">
+                                <a href="https://github.com/Ethan-Sarricolea/Juego-de-Mazmorras" target="_blank" class="btn btn-dark btn-lg">
+                                    <i class="fab fa-github"></i> Ver en GitHub
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Ethan-Sarricolea/Files-organizier">
+                                <h3 style="color: rgb(52, 59, 87);">Organizador de archivos</h3>
+                            </a>
+                            <p>
+                                Aunque es un proyecto simple y sencillo, implico en su momento un paso mas
+                                en la escala de mis conocimientos adquiridos, <a href="" onclick="alert('En desarrollo')">ver mas...</a>
+                            </p>
+                            
+                        </li>
+                        <!-- <li>
+                            <a href="https://github.com/miusuario/proyecto2" target="_blank">Proyecto 2</a>
+                            <p>Descripción breve de lo que hace este proyecto.</p>
+                        </li> -->
+                    </ul>
+                    <div class="text-center">
+                        <a href="src/pages/proyectos.html" target="_blank" class="btn btn-blue btn-lg" style="background-color:rgb(101, 173, 232); margin-bottom: 30px;">
+                            Ver proyectos
+                        </a>
+                    </div>
+                </div>
             </section>
         </main>
-         <!-- Bootstrap JS (necesario para el menú responsive) -->
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Pie de pagina -->
+        <footer class="bg-dark container-fluid flex-grow-1" style="">
+           <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <div class="me-5 d-none d-lg-block"> <!-- izquierda -->
+                    <span style="color: white;">Mis redes sociales</span>
+                </div>
+                <!-- Derecha -->
+                <div class="row">
+                    <!-- <a href="https://" target="_blank"  class="me-4 text-reset" style="color: white;">
+                        <span style="color: white;" class="fab fa-facebook-f"></span>
+                        <p style="color: white;">Facebook</p>
+                    </a>             -->
+                    <!-- <a href="https://" target="_blank"  class="me-4 text-reset" style="color: white;">
+                        <span class="fab fa-x" style="color: white;"></span>
+                        <p style="color: white;">X / Twitter</p>
+                     </a> -->
+                    
+                    <a href="mailto:esarricolea@gmail.com" target="_blank"  class="me-4 text-reset" style="color: white;">
+                        <span class="fab fa-google" style="color: white;"></span>
+                        <p style="color: white;">Correo de google</p>
+                    </a>
+                    <!-- <a href="https://" target="_blank"  class="me-4 text-reset" style="color: white;">
+                        <span class="fab fa-instagram" style="color: white;"></span>
+                        <p style="color: white;">Instagram</p>
+                    </a> -->
+                    <a href="https:www.linkedin.com/in/ethan-sarricolea-cortes" target="_blank"class="me-4 text-reset" style="color: white;">
+                        <span class="fab fa-linkedin" style="color: white;"></span>
+                        <p style="color: white;">LinkedIn</p>
+                    </a>
+                    <a href="https://github.com/Ethan-Sarricolea" target="_blank" class="me-4 text-reset">
+                        <span class="fab fa-github" style="color: white;"></span>
+                        <p style="color: white;" >GitHub</p>
+                    </a>
+                </div >
+                 <!-- Copyright -->
+                <div class="text-center p-4 row" style="color: white;">
+                    © 2025 Copyright:
+                    <!-- <a class="text-reset fw-bold" href=""></a> -->
+                </div>
+           </section>
+
+           <!-- links -->
+        </footer>
+        <!-- Bootstrap JS (necesario para el menú responsive) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
