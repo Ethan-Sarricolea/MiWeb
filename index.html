@@ -7,7 +7,9 @@
         <!-- Importar Bootstrap desde la CDN -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <!-- Css modo oscuro -->
+        <link rel="stylesheet" href="src\styles\darkmode.css">
     </head>
     <body>
 
@@ -18,9 +20,18 @@
                 <a class="navbar-brand" href="#">
                     <img src="https://avatars.githubusercontent.com/u/144255690?v=4" alt="Mi Logo" class="d-inline-block align-text-top" style="height: 50px;">
                 </a>
+                <!-- Modo oscuro -->
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+                    <label class="form-check-label" for="darkModeSwitch" style="color: white;">Modo Oscuro</label>
+                </div>
+                
+                <!-- Abrir navegacion -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Opciones de navegacion -->
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
@@ -34,6 +45,15 @@
 
         <!-- Información de la pagina -->
         <main>
+            <br>
+            <section id="MyPhoto" class="container">
+                <div style="justify-content: center;
+                display: flex; width: auto; height: 400px; max-height: 600px;
+                max-width: 600px; object-fit: cover; margin: 0 auto;">
+                    <img src="https://avatars.githubusercontent.com/u/144255690?v=4" alt="Imagen de perfil" class="rounded-circle" style="width: auto;">
+                </div>
+            <br>
+            </section>
             <!-- About me -->
             <section id="about-me" class="container">
                 <h1 style="color: rgb(73, 76, 209); text-align: center; padding-top: 20px;">Sobre mi</h1>
@@ -43,6 +63,7 @@
                     hago este sitio web personal para poner a prueba mis conocimientos y si es posible compartirlos
                     con aquellos que esten adentrandose en este extenso mundo de la tecnología.
                 </p>
+                <br>
                 <div style="text-align: right; list-style-position: inside;">
                     <h3 style="background-color: rgb(191, 191, 191);">Gustos / intereses</h3>
                     <p>
@@ -72,6 +93,7 @@
                         </ul>
                     </p>
                 </div>
+                <br>
                 <!-- Aspiraciones -->
                 <div style="text-align: left;">
                     <h3 style="background-color: rgb(150,150,150);">Aspiraciones</h3>
@@ -80,10 +102,24 @@
                         del area en la que desempeñarme principalmente, pero estos son algunas de
                         mis metas a medio / largo plazo.
                     </p>
-                    <h5 style="text-align: center;">Desarrollar un juego Indie</h5>
-                    <p style="text-align: center;">(En proceso)</p>
-                    <h5 style="text-align: center;">Desarrollar software en una empresa</h5>
-                    <p style="text-align: center;">(Aun un poco lejos pero en proceso)</p>
+                    <div style="text-align: center;"></div>
+                    <h5>Desarrollo de Videojuegos</h5>
+                    <p>
+                        Mi pasión por los juegos me ha llevado a
+                        buscar aprender como desarrollarlos y los diversos medios para hacerlo.
+                    </p>
+                    <h5>Desarrollo software en una empresa</h5>
+                    <p>
+                        Ya que estudio ingeniería de software, sin duda uno de mis objetivos
+                        es participar en el desarrollo de software para una empresa y experimentar el trabajo
+                        en equipo de forma profesional.
+                    </p>
+                    <h5>Desarrollo de IA</h5>
+                    <p>
+                        La IA es un area en constante crecimiento y sin duda un tema muy interesante,
+                        por lo que espero, en algun punto de mi carrera, desarrollar o participar
+                        en el desarrollo y entrenamiento de una Inteligencia artificial.
+                    </p>
 
                 </div>
                 <div class="container" style="text-align: right; padding-top: 30px; padding-bottom: 30px; text-align: right; list-style-position: inside;">
@@ -118,7 +154,75 @@
                     <li>Levantamiento de requisitos (ERS)</li>
                 </ul>
             <br>
+            <hr>
+            <h2 style="padding-top: 30px; color: rgb(73, 76, 209);">Cursos</h2>
+            <p style="padding-bottom: 30px;">
+                Estos son algunos de los cursos que he completado y que considero importantes en mi formación.
+            </p>
+            <!-- Carrusel de mis cursos -->
+
+            <style>
+                .carousel-item img {
+                    width: auto; /* Mantiene el ancho original sin forzarlo */
+                    height: 500px; /* Ajusta la altura según tu diseño */
+                    max-width: 700px; /* Tamaño máximo que quieres */
+                    object-fit: cover; /* Recorta y ajusta la imagen sin deformarla */
+                    display: block; /* Evita que el `img` tenga margen extra */
+                    margin: 0 auto; /* Centra la imagen horizontalmente */
+                }
+              </style>
+            
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators" style="background-color: gray;">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner container">
+                  <div class="carousel-item active ">
+                    <a href="https://coursera.org/share/6a35bf7240d08ad161669dc077588154" target="_blank">
+                        <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~YATHWOIRB078/CERTIFICATE_LANDING_PAGE~YATHWOIRB078.jpeg"
+                            class="d-block w-100" alt="..." >
+                        <div class="carousel-caption d-none d-md-block" style="color: rgba(0, 0, 0, 0.850); background-color: rgba(255, 255, 255, 0.500);">
+                            <h5>Control de versiones</h5>
+                            <p>
+                                Curso de control de versiones de Meta en Coursera, donde aprendi sobre Git, Github
+                                y un poco de Linux. Forma parte del Certificado profesional de Desarrollador front-end de Meta
+                            </p>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="https://www.credly.com/badges/a5380607-52aa-4cb7-835f-da17c1794178/linked_in_profile">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D2DAQFjkT26-d1lwg/profile-treasury-document-cover-images_480/profile-treasury-document-cover-images_480/0/1717517470638?e=1741917600&v=beta&t=0y81lhaEDCYHRMC6CbNw_zCh-MLqQQchCBiZtqosBc4" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block" style="color: rgba(0, 0, 0, 0.850); background-color: rgba(255, 255, 255, 0.500);">
+                            <h5>JavaScript Essentials 1</h5>
+                            <p>Curso de JavaScript de Cisco Ntworking Academy con conocimientos basicos del lenguaje.</p>
+                        </div>
+                    </a>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="https://coursera.org/share/b729430d89813e48e1cf1f6aff472ac8">
+                        <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~M2NH9V52A6TA/CERTIFICATE_LANDING_PAGE~M2NH9V52A6TA.jpeg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block" style="color: rgba(0, 0, 0, 0.850); background-color: rgba(255, 255, 255, 0.500);">
+                        <h5>Introducción al desarrollo Front-end</h5>
+                        <p>Curso inicial parte del Certificado profesional de Desarrollador front-end de Meta.</p>
+                        </div>
+                    </a>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: gray;"></span>
+                  <span class="visually-hidden" style="color: red;">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: gray;"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </section>
+            <br>
+            <hr>
             <!-- Herramientas -->
             <section class="container" style="padding-bottom: 30px; padding-top: 30px;">
                 <h1 style="text-align: center; color: rgb(73, 76, 209); padding-top: 20px;">Herramientas</h1>
@@ -138,12 +242,8 @@
                             <ul>
                                 <li>Varibles y tipos de datos</li>
                                 <li>Entrada y salida de datos</li>
-                                <li>If, Elif, While, Do-While, For</li>
-                                <li>Break, Pass, Return, Continue</li>
-                                <li>Manejo de excepciones / Try-except</li>
-                                <li>Funciones / metodos</li>
-                                <li>Clases</li>
-                                <li>Librerias</li>
+                                <li>Condicionales y excepciones</li>
+                                <li>Funciones, clases y librerias</li>
                                 <li>Interfaces graficas grafica</li>
                                 <li>...</li>
                             </ul>
@@ -155,18 +255,10 @@
                             <ul>
                                 <li>Variables y tipos de datos</li>
                                 <li>Entrada y salida de datos</li>
-                                <li>If, Else-if, While, Do-While, Fori, Foreach</li>
-                                <li>Manejo de excepciones / Try-catch</li>
-                                <li>Metodos / funciones</li>
-                                <li>Clases</li>
-                                <li>Librerias</li>
-                                <li>Modificadores de acceso</li>
+                                <li>Condicionales y excepciones</li>
+                                <li>Metodos, clases y librerias</li>
+                                <li>POO</li>
                                 <li>...</li>
-                                <!-- <li>Herencia</li>
-                                <li>Sobreescritura</li>
-                                <li>Sobrecarga</li>
-                                <li>Herencia</li>
-                                <li>Interfaces</li> -->
                             </ul>
                         </td>
                     </tr>
@@ -176,10 +268,8 @@
                             <ul>
                                 <li>Variables y tipos de datos</li>
                                 <li>Entrada y salida de datos</li>
-                                <li>If, Else-if, While, Do-While, Fori, Foreach</li>
-                                <li>Manejo de excepciones / Try-catch</li>
-                                <li>Metodos / funciones</li>
-                                <li>Clases</li>
+                                <li>Condicionales y excepciones</li>
+                                <li>Metodos y clases</li>
                                 <li>DOM</li>
                             </ul>
                         </td>
@@ -190,8 +280,8 @@
                             <ul>
                                 <li>Variables y tipos de datos</li>
                                 <li>Entrada y salida de datos</li>
-                                <li>If, Else-if, While, Do-While, Fori, Foreach</li>
-                                <li>Metodos / funciones</li>
+                                <li>Condicionales</li>
+                                <li>Metodos</li>
                                 <li>Estructuras</li>
                             </ul>
                         </td>
@@ -202,11 +292,8 @@
                             <ul>
                                 <li>Variables y tipos de datos</li>
                                 <li>Entrada y salida de datos</li>
-                                <li>If, Else-if, While, Do-While, Fori, Foreach</li>
-                                <li>Manejo de excepciones / Try-catch</li>
-                                <li>Metodos / funciones</li>
-                                <li>Clases</li>
-                                <li>Librerias</li>
+                                <li>Condicionales y excepciones</li>
+                                <li>Metodos, clases y librerias</li>
                                 <li>...</li>
                             </ul>
                         </td>
@@ -277,22 +364,30 @@
                     <span style="color: white;">Mis redes sociales</span>
                 </div>
                 <!-- Derecha -->
-                <div class="row">
+                <div class="row" style="color: white;">
                     <a href="mailto:esarricolea@gmail.com" target="_blank"  class="me-4 text-reset" style="color: white;">
-                        <span class="fab fa-google" style="color: white;"></span>
-                        <p style="color: white;">Correo de google</p>
+                        <span class="fab fa-google"></span>
+                        <p>Correo de google</p>
                     </a>
                     <a href="https://www.linkedin.com/in/ethan-sarricolea-cortes" target="_blank"class="me-4 text-reset" style="color: white;">
-                        <span class="fab fa-linkedin" style="color: white;"></span>
-                        <p style="color: white;">LinkedIn</p>
+                        <span class="fab fa-linkedin"></span>
+                        <p>LinkedIn</p>
                     </a>
                     <a href="https://github.com/Ethan-Sarricolea" target="_blank" class="me-4 text-reset">
-                        <span class="fab fa-github" style="color: white;"></span>
-                        <p style="color: white;" >GitHub</p>
+                        <span class="fab fa-github"></span>
+                        <p>GitHub</p>
+                    </a>
+                    <a href="https://www.coursera.org/user/1e1b962052cda4a15bc6f83414c9aed4" target="_blank"  class="me-4 text-reset" style="color: white;">
+                        <span class="fas fa-graduation-cap"></span>
+                        <p>Coursera</p>
+                    </a>
+                    <a href="https://www.credly.com/users/ethan-sarricolea" target="_blank" class="me-4 text-reset">
+                        <span class="fas fa-certificate"></span>
+                        <p>Credly</p>
                     </a>
                 </div >
                  <!-- Copyright -->
-                <div class="text-center p-4 row" style="color: white;">
+                <div class="text-center p-4 row" style="color: white; ">
                     © 2025 Copyright:
                     Ethan-Sarricolea
                 </div>
@@ -302,5 +397,7 @@
         </footer>
         <!-- Bootstrap JS (necesario para el menú responsive) -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Modo oscuro (script) -->
+        <script src="src\scripts\darkmode.js"></script>
     </body>
 </html>
