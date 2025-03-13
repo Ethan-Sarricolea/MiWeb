@@ -7,9 +7,9 @@
         <!-- Importar Bootstrap desde la CDN -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <!-- Css modo oscuro -->
         <link rel="stylesheet" href="src\styles\darkmode.css">
+        <link rel="stylesheet" href="src/styles/style.css">
     </head>
     <body>
 
@@ -37,7 +37,7 @@
                         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="src\pages\proyectos.html">Proyectos</a></li>
                         <li class="nav-item"><a class="nav-link" href="src\pages\conocimientos.html">Conocimientos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" onclick="alert('En desarrollo')">Apuntes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="alert('En desarrollo')">Portafolio</a></li>
                     </ul>
                 </div>
             </div>
@@ -159,18 +159,8 @@
             <p style="padding-bottom: 30px;">
                 Estos son algunos de los cursos que he completado y que considero importantes en mi formación.
             </p>
-            <!-- Carrusel de mis cursos -->
 
-            <style>
-                .carousel-item img {
-                    width: auto; /* Mantiene el ancho original sin forzarlo */
-                    height: 500px; /* Ajusta la altura según tu diseño */
-                    max-width: 700px; /* Tamaño máximo que quieres */
-                    object-fit: cover; /* Recorta y ajusta la imagen sin deformarla */
-                    display: block; /* Evita que el `img` tenga margen extra */
-                    margin: 0 auto; /* Centra la imagen horizontalmente */
-                }
-              </style>
+            <!-- Carrusel de mis cursos -->
             
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators" style="background-color: gray;">
@@ -231,89 +221,91 @@
                     que me encuentro, actualizare la tabla de acorde a mis conocimientos mas fuertes, pero
                     habra un acceso a todas las tecnologias de las cuales he aprendido y tenga apuntes.
                 </p>
-                <table class="table">
-                    <tr>
-                        <td><h5>Tecnología / herramienta</h5></td>
-                        <td><h5>Conceptos</h5></td>
-                    </tr>
-                    <tr>
-                        <td><a href="">Python</a></td>
-                        <td>
-                            <ul>
-                                <li>Varibles y tipos de datos</li>
-                                <li>Entrada y salida de datos</li>
-                                <li>Condicionales y excepciones</li>
-                                <li>Funciones, clases y librerias</li>
-                                <li>Interfaces graficas grafica</li>
-                                <li>...</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="">Java</a></td>
-                        <td>
-                            <ul>
-                                <li>Variables y tipos de datos</li>
-                                <li>Entrada y salida de datos</li>
-                                <li>Condicionales y excepciones</li>
-                                <li>Metodos, clases y librerias</li>
-                                <li>POO</li>
-                                <li>...</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="">JavaScript</a></td>
-                        <td>
-                            <ul>
-                                <li>Variables y tipos de datos</li>
-                                <li>Entrada y salida de datos</li>
-                                <li>Condicionales y excepciones</li>
-                                <li>Metodos y clases</li>
-                                <li>DOM</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="">C y C++</a></td>
-                        <td>
-                            <ul>
-                                <li>Variables y tipos de datos</li>
-                                <li>Entrada y salida de datos</li>
-                                <li>Condicionales</li>
-                                <li>Metodos</li>
-                                <li>Estructuras</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="">Dart</a></td>
-                        <td>
-                            <ul>
-                                <li>Variables y tipos de datos</li>
-                                <li>Entrada y salida de datos</li>
-                                <li>Condicionales y excepciones</li>
-                                <li>Metodos, clases y librerias</li>
-                                <li>...</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="">Bases de datos (SQL)</a></td>
-                        <td>
-                            <ul>
-                                <li>Fase de diseño (Entidad-relación)</li>
-                                <li>Modelo relacional</li>
-                                <li>SQL</li>
-                                <li>...</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a href="">Diseño web (HTML, CSS, Bootstrap)</a></td>
-                        <td>Basico</td>
-                    </tr>
-                </table>
+                <div class="table-responsive" style="text-align: center;">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td><h5>Tecnología / herramienta</h5></td>
+                            <td><h5>Conceptos</h5></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">Python</a></td>
+                            <td>
+                                <ul>
+                                    <li>Varibles y tipos de datos</li>
+                                    <li>Entrada y salida de datos</li>
+                                    <li>Condicionales y excepciones</li>
+                                    <li>Funciones, clases y librerias</li>
+                                    <li>Interfaces graficas grafica</li>
+                                    <li>...</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">Java</a></td>
+                            <td>
+                                <ul>
+                                    <li>Variables y tipos de datos</li>
+                                    <li>Entrada y salida de datos</li>
+                                    <li>Condicionales y excepciones</li>
+                                    <li>Metodos, clases y librerias</li>
+                                    <li>POO</li>
+                                    <li>...</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">JavaScript</a></td>
+                            <td>
+                                <ul>
+                                    <li>Variables y tipos de datos</li>
+                                    <li>Entrada y salida de datos</li>
+                                    <li>Condicionales y excepciones</li>
+                                    <li>Metodos y clases</li>
+                                    <li>DOM</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">C y C++</a></td>
+                            <td>
+                                <ul>
+                                    <li>Variables y tipos de datos</li>
+                                    <li>Entrada y salida de datos</li>
+                                    <li>Condicionales</li>
+                                    <li>Metodos</li>
+                                    <li>Estructuras</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">Dart</a></td>
+                            <td>
+                                <ul>
+                                    <li>Variables y tipos de datos</li>
+                                    <li>Entrada y salida de datos</li>
+                                    <li>Condicionales y excepciones</li>
+                                    <li>Metodos, clases y librerias</li>
+                                    <li>...</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">Bases de datos (SQL)</a></td>
+                            <td>
+                                <ul>
+                                    <li>Fase de diseño (Entidad-relación)</li>
+                                    <li>Modelo relacional</li>
+                                    <li>SQL</li>
+                                    <li>...</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="">Diseño web (HTML, CSS, Bootstrap)</a></td>
+                            <td>Basico</td>
+                        </tr>
+                    </table>
+                </div>
                 <div class="text-center">
                     <a href="src/pages/conocimientos.html">
                     <button target="_blank" class="btn btn-blue btn-lg" style="background-color:rgb(101, 173, 232);">
@@ -330,7 +322,7 @@
                     <ul>
                         <li style="margin-bottom: 30px;">
                             <a href="src\pages\proyectos\mazmorras.html">
-                                <h3 style="color: rgb(52, 59, 87);">Generador de mazmorras aleatorias</h3>
+                                <h3>Generador de mazmorras aleatorias</h3>
                             </a>
                             <p>
                                 Proyecto escolar que genera mazmorras (representadas en grafos) con un numero
@@ -339,7 +331,7 @@
                         </li>
                         <li>
                             <a href="src/pages/proyectos/filesOrganizier.html">
-                                <h3 style="color: rgb(52, 59, 87);">Organizador de archivos</h3>
+                                <h3>Organizador de archivos</h3>
                             </a>
                             <p>
                                 Aunque es un proyecto simple y sencillo, implico en su momento un paso mas
@@ -381,9 +373,17 @@
                         <span class="fas fa-graduation-cap"></span>
                         <p>Coursera</p>
                     </a>
+                    <a href="https://www.domestika.org/es/spartandmx" target="_blank" class=" me-4 text-reset" style="color: white;">
+                        <span class="fa-solid fa-heart"></span>
+                        <p>Domestika</p>
+                    </a>
                     <a href="https://www.credly.com/users/ethan-sarricolea" target="_blank" class="me-4 text-reset">
                         <span class="fas fa-certificate"></span>
                         <p>Credly</p>
+                    </a>
+                    <a href="https://omegaup.com/profile/Sarricolea_Ethan/" class="me-4 text-reset" target="_blank">
+                        <span style="text-decoration: none; display: inline-block;"><b>&Omega;Up</b></span>
+                        <p>OmegaUp</p>
                     </a>
                 </div >
                  <!-- Copyright -->

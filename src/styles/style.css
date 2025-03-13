@@ -1,0 +1,28 @@
+body {
+    /* background: radial-gradient(circle, #98faff91, #7ac0fd); */
+    /* background: linear-gradient(to bottom, #4facfe, #00f2fe); */
+    color: black;
+}
+  
+  /* Modo oscuro (cuando se agrega la clase "dark-mode") */
+body.dark-mode {
+    background: radial-gradient(#540085, #000000);
+    color: white;
+}
+
+h3 {
+  color: #2A3B47;
+}
+
+.carousel-item img {
+  width: auto; /* Mantiene el ancho original sin forzarlo */
+  height: 500px; /* Ajusta la altura según tu diseño */
+  max-width: 700px; /* Tamaño máximo que quieres */
+  object-fit: cover; /* Recorta y ajusta la imagen sin deformarla */
+  display: block; /* Evita que el `img` tenga margen extra */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+td ul {
+  list-style: none;
+}
