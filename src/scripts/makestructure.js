@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     // Modificar segun las diferencias
                     if (originalHref && !originalHref.startsWith("http")) {
                         let newHref = "../".repeat(depth) + repoName + "/" + originalHref;
+                        console.log(newHref)
                         link.setAttribute("href", newHref);
                     }
                 });
