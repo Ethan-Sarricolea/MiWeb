@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Obtener la "profundidad" y ruta base de la pagina actual
     let depth = window.location.pathname.split("/").length - 2;
-    let basePath = depth > 0 ? "../".repeat(depth) + "src/includes/" : "src/includes/";
+    
+    // Ajustar la ruta base según el entorno (local o GitHub Pages)
+    let basePath = window.location.hostname === 'localhost' ? "src/includes/" : "/src/includes/";
 
     // Encontrar los div header y footer
     let headerEl = document.getElementById("header");
@@ -47,6 +49,61 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => console.error("Error cargando el footer:", error));
     }
 });
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Obtener la "profundidad" y ruta base de la pagina actual
+//     let depth = window.location.pathname.split("/").length - 2;
+//     let basePath = depth > 0 ? "../".repeat(depth) + "src/includes/" : "src/includes/";
+
+//     // Encontrar los div header y footer
+//     let headerEl = document.getElementById("header");
+//     let footerEl = document.getElementById("footer");
+
+//     // Si se encuentra el header mostrarlo
+//     if (headerEl) {
+//         fetch(basePath + "header.html")
+//             .then(response => response.text())
+//             .then(data => {
+//                 headerEl.innerHTML = data;
+
+//                 // 🔹 Asignar el evento para el botón de modo oscuro
+//                 const darkModeButton = document.getElementById("darkModeSwitch");
+//                 if (darkModeButton) {
+//                     darkModeButton.addEventListener("click", function () {
+//                         document.body.classList.toggle("dark-mode");
+//                     });
+//                 }
+
+//                 // Ajustar rutas de los enlaces del nav
+//                 document.querySelectorAll("#header .nav-link").forEach(link => {
+//                     // Obtener los href del nav
+//                     let originalHref = link.getAttribute("href");
+
+//                     // Modificar segun las diferencias
+//                     if (originalHref && !originalHref.startsWith("http")) {
+//                         let newHref = "../".repeat(depth) + originalHref;
+//                         link.setAttribute("href", newHref);
+//                     }
+//                 });
+//             })
+//             .catch(error => console.error("Error cargando el header:", error));
+//     }
+
+//     // Si se encuentra el footer, mostrarlo
+//     if (footerEl) {
+//         fetch(basePath + "footer.html")
+//             .then(response => response.text())
+//             .then(data => {
+//                 footerEl.innerHTML = data;
+//             })
+//             .catch(error => console.error("Error cargando el footer:", error));
+//     }
+// });
+
+
+// Fallido
+
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     let depth = window.location.pathname.split("/").length - 2;
