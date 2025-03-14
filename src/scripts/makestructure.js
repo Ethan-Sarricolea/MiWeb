@@ -3,7 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let depth = window.location.pathname.split("/").length - 2;
     
     // Ajustar la ruta base según el entorno (local o GitHub Pages)
-    let basePath = window.location.hostname === 'localhost' ? "src/includes/" : "/src/includes/";
+    // let basePath = window.location.hostname === 'localhost' ? "src/includes/" : "/src/includes/";
+    let isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+    let repoName = "/ethan_saco.github.io"; // Cambia esto por el nombre de tu repositorio en GitHub Pages si es necesario
+    let basePath = isLocal ? "src/includes/" : repoName + "/src/includes/";
+    console.log(basePath);
 
     // Encontrar los div header y footer
     let headerEl = document.getElementById("header");
