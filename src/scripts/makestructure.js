@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.querySelectorAll("#header .nav-link").forEach(link => {
                     // Obtener los href del nav
                     let originalHref = link.getAttribute("href");
-
+                    console.log(originalHref)
                     // Modificar segun las diferencias
                     if (originalHref && !originalHref.startsWith("http")) {
-                        let newHref = "../".repeat(depth) + originalHref;
+                        let newHref = "../".repeat(depth) + repoName + "/" + originalHref;
                         link.setAttribute("href", newHref);
                     }
                 });
