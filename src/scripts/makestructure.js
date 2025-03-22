@@ -1,15 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let depth = window.location.pathname.split("/").length - 2;
+    let pathParts = window.location.pathname.split("/").filter(p => p !== "");
+    let depth = pathParts.length - 1; // Calcula la profundidad correctamente
     console.log("Profundidad:", depth);
     console.log("Ruta actual:", window.location.pathname);
 
     const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
-    const repoName = "/MiWeb"; // Cambia esto según tu configuración en GitHub Pages
+    const repoName = "MiWeb"; // Cambia esto si tu repo tiene otro nombre
 
-    // Definir basePath correctamente
-    let basePath = depth > 0 ? "../".repeat(depth) + "src/includes/" : "src/includes/";
-    if (!isLocal) {
-        basePath = repoName + "/" + basePath;
+    let basePath = "";
+
+    if (isLocal) {
+        basePath = depth > 0 ? "../".repeat(depth) + "src/includes/" : "src/includes/";
+    } else {
+        basePath = depth > 0 ? "../".repeat(depth) + repoName + "/src/includes/" : `/${repoName}/src/includes/`;
     }
 
     console.log("basePath:", basePath);
@@ -20,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (headerEl) {
         fetch(basePath + "header.html")
-            .then(response => response.text())
+            .then(response => response.ok ? response.text() : Promise.reject("Header no encontrado"))
             .then(data => {
                 headerEl.innerHTML = data;
 
@@ -38,12 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     console.log("Original:", originalHref);
 
                     if (originalHref && !originalHref.startsWith("http")) {
-                        let ifrepo = isLocal ? "" : repoName;
+                        let ifrepo = isLocal ? "" : `/${repoName}`;
                         
-                        // Asegurar que no se duplique la barra `/`
-                        let newHref = "../".repeat(depth) + ifrepo + (ifrepo.endsWith("/") ? "" : "/") + originalHref;
-                        newHref = newHref.replace(/\/+/g, "/"); // Evitar dobles barras `//`
-                        
+                        // Construir la nueva ruta
+                        let newHref = "../".repeat(depth) + ifrepo + "/" + originalHref;
+                        newHref = newHref.replace(/\/+/g, "/"); // Eliminar dobles barras `/`
+
                         console.log("Nuevo:", newHref);
                         link.setAttribute("href", newHref);
                     }
@@ -54,13 +57,78 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (footerEl) {
         fetch(basePath + "footer.html")
-            .then(response => response.text())
+            .then(response => response.ok ? response.text() : Promise.reject("Footer no encontrado"))
             .then(data => {
                 footerEl.innerHTML = data;
             })
             .catch(error => console.error("Error cargando el footer:", error));
     }
 });
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     let depth = window.location.pathname.split("/").length - 2;
+//     console.log("Profundidad:", depth);
+//     console.log("Ruta actual:", window.location.pathname);
+
+//     const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+//     const repoName = "/MiWeb"; // Cambia esto según tu configuración en GitHub Pages
+
+//     // Definir basePath correctamente
+//     let basePath = depth > 0 ? "../".repeat(depth) + "src/includes/" : "src/includes/";
+//     if (!isLocal) {
+//         basePath = repoName + "/" + basePath;
+//     }
+
+//     console.log("basePath:", basePath);
+
+//     // Cargar el header y el footer
+//     let headerEl = document.getElementById("header");
+//     let footerEl = document.getElementById("footer");
+
+//     if (headerEl) {
+//         fetch(basePath + "header.html")
+//             .then(response => response.text())
+//             .then(data => {
+//                 headerEl.innerHTML = data;
+
+//                 // Activar botón de modo oscuro
+//                 const darkModeButton = document.getElementById("darkModeSwitch");
+//                 if (darkModeButton) {
+//                     darkModeButton.addEventListener("click", function () {
+//                         document.body.classList.toggle("dark-mode");
+//                     });
+//                 }
+
+//                 // Ajustar rutas de los enlaces de navegación
+//                 document.querySelectorAll("#header .nav-link").forEach(link => {
+//                     let originalHref = link.getAttribute("href");
+//                     console.log("Original:", originalHref);
+
+//                     if (originalHref && !originalHref.startsWith("http")) {
+//                         let ifrepo = isLocal ? "" : repoName;
+                        
+//                         // Asegurar que no se duplique la barra `/`
+//                         let newHref = "../".repeat(depth) + ifrepo + (ifrepo.endsWith("/") ? "" : "/") + originalHref;
+//                         newHref = newHref.replace(/\/+/g, "/"); // Evitar dobles barras `//`
+                        
+//                         console.log("Nuevo:", newHref);
+//                         link.setAttribute("href", newHref);
+//                     }
+//                 });
+//             })
+//             .catch(error => console.error("Error cargando el header:", error));
+//     }
+
+//     if (footerEl) {
+//         fetch(basePath + "footer.html")
+//             .then(response => response.text())
+//             .then(data => {
+//                 footerEl.innerHTML = data;
+//             })
+//             .catch(error => console.error("Error cargando el footer:", error));
+//     }
+// });
 
 
 // document.addEventListener("DOMContentLoaded", function () {
