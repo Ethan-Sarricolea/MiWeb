@@ -10,18 +10,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let repoName = "/MiWeb"; // Cambia esto por el nombre de tu repositorio en GitHub Pages si es necesario
 
+    console.log("basePath: " = basePath);
+
     /**
      * Solo usar en desarrollo
      */
-    // const localPath = (isLocal && local1===window.location.hostname ? local1 : local2);
-    // let basePath = (depth > 0 ? "../".repeat(depth) + "src/includes/" : "src/includes/");
-    // basePath = (isLocal ? basePath : repoName + basePath);
+    const localPath = (isLocal && local1===window.location.hostname ? local1 : local2);
+    let basePath = (depth > 0 ? "../".repeat(depth) + "src/includes/" : "src/includes/");
+    basePath = (isLocal ? basePath : repoName + basePath);
 
-
-    let basePath = isLocal ? "src/includes/" : repoName + "/src/includes/";
-
-    console.log(basePath);
-
+    // let basePath = isLocal ? "src/includes/" : repoName + "/src/includes/";
+    
     // Encontrar los div header y footer
     let headerEl = document.getElementById("header");
     let footerEl = document.getElementById("footer");
