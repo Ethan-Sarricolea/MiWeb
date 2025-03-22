@@ -8,13 +8,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const local2 = "127.0.0.1";
     let isLocal = window.location.hostname === local1 || window.location.hostname === local2;
 
-    const localPath = (isLocal && local1===window.location.hostname ? local1 : local2);
-
     let repoName = "/MiWeb"; // Cambia esto por el nombre de tu repositorio en GitHub Pages si es necesario
 
-    let basePath = (depth > 0 ? "../".repeat(depth) + "src/includes/" : "src/includes/");
-    basePath = (isLocal ? basePath : repoName + basePath);
-    // let basePath = isLocal ? "src/includes/" : repoName + "/src/includes/";
+    /**
+     * Solo usar en desarrollo
+     */
+    // const localPath = (isLocal && local1===window.location.hostname ? local1 : local2);
+    // let basePath = (depth > 0 ? "../".repeat(depth) + "src/includes/" : "src/includes/");
+    // basePath = (isLocal ? basePath : repoName + basePath);
+
+
+    let basePath = isLocal ? "src/includes/" : repoName + "/src/includes/";
 
     console.log(basePath);
 
