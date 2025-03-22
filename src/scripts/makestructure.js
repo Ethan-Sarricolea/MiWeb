@@ -4,9 +4,18 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Ajustar la ruta base según el entorno (local o GitHub Pages)
     // let basePath = window.location.hostname === 'localhost' ? "src/includes/" : "/src/includes/";
-    let isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+    const local1 = "localhost";
+    const local2 = "127.0.0.1";
+    let isLocal = window.location.hostname === local1 || window.location.hostname === local2;
+
+    const localPath = (isLocal && local1===window.location.hostname ? local1 : local2);
+
     let repoName = "/MiWeb"; // Cambia esto por el nombre de tu repositorio en GitHub Pages si es necesario
-    let basePath = isLocal ? "src/includes/" : repoName + "/src/includes/";
+
+    let basePath = (depth > 0 ? "../".repeat(depth) + "src/includes/" : "src/includes/");
+    basePath = (isLocal ? basePath : repoName + basePath);
+    // let basePath = isLocal ? "src/includes/" : repoName + "/src/includes/";
+
     console.log(basePath);
 
     // Encontrar los div header y footer
@@ -30,12 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Ajustar rutas de los enlaces del nav
                 document.querySelectorAll("#header .nav-link").forEach(link => {
+
                     // Obtener los href del nav
                     let originalHref = link.getAttribute("href");
                     console.log(originalHref)
+
                     // Modificar segun las diferencias
                     if (originalHref && !originalHref.startsWith("http")) {
-                        let newHref = "../".repeat(depth) + repoName + "/" + originalHref;
+                        let newHref = "../".repeat(depth) + (isLocal ? "" : repoName) + "/" + originalHref;
                         console.log(newHref)
                         link.setAttribute("href", newHref);
                     }

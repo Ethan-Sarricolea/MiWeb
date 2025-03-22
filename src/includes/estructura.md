@@ -17,8 +17,6 @@ Parte superior
         <link rel="stylesheet" href="src/styles/style.css">
     </head>
     <body>
-        <main>
-        </main>
 ```
 
 Para colocar el header
@@ -27,18 +25,19 @@ Para colocar el header
     <script src="src/scripts/makestructure.js"></script>
     <!-- Barra de navegación básica -->
     <div id="header"></div>
-
+    <main>
+    </main>
 ```
 
 Colocar el footer
 
 ```html
-<!-- Footer -->
-    <div id="footer"></div>
+        <!-- Footer -->
+        <div id="footer"></div>
 
-    <!-- Bootstrap JS (necesario para el menú responsive) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="src\scripts\darkmode.js"></script>
+        <!-- Bootstrap JS (necesario para el menú responsive) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="src\scripts\darkmode.js"></script>
     </body>
 </html>
 ```

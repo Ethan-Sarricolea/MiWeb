@@ -10,10 +10,19 @@ coloca en el navegador el siguiente link para acceder a la pagina: [https://etha
 
 Actualmente estoy trabajando en implementar lo siguiente:
 
-1. Dark-mode: Actualmente se puede utilizar el modo oscuro en todas las paginas accesibles, aunque aun esta en mejoras el diseño y es posible alguna falla.
+4. Correxiones de diseño (21/03/2023)
+- Correccion de JS de encabezado y footer (ahora me permite verlo correctamente desde el live server)
+- Aumento de tamaño del texto (Solo en la pantalla inicial / index)
+- Quitar informacion innecesaria
+- Mejoras de diseño y adicion de animaciones simples
 
-2. Modularización:
-Estoy intentando (hasta el momento con relativo exito) separar la creación del footer y header en diferentes "modulos" para evitar implementarlos de forma individual en cada pagina.
+* Aun estoy trabajando en que el modo oscuro se mantenga
 
-3. Adición de contenido:
-Estoy trabajando en agregar mas contenido respecto a mis conocimientos y planeo crear un portafolio aqui mismo.
+### Pendientes
+
+- Mejora en documentacion de codigo y buenas practicas
+- Considerar la optimizacion (A largo plazo)
+- Añadir mas contenido
+- Mejorar aun mas el diseño
+- Permitir que se guarde en cache la eleccion de modo oscuro (El problema podria estar relacionado con el JS de modularizacion de header y footer)
+- Corregir el diseño del carrusel de imagenes (De mis certificados que ahora se movio a conocimientos)
