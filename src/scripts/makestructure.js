@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Obtener la "profundidad" y ruta base de la pagina actual
     let depth = window.location.pathname.split("/").length - 2;
+    console.log(depth);
+    console.log(window.location.pathname);
     
     // Ajustar la ruta base según el entorno (local o GitHub Pages)
     // let basePath = window.location.hostname === 'localhost' ? "src/includes/" : "/src/includes/";
