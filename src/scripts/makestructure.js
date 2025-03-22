@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let repoName = "/MiWeb"; // Cambia esto por el nombre de tu repositorio en GitHub Pages si es necesario
 
-    console.log("basePath: " = basePath);
+    console.log("basePath: " + basePath);
 
     /**
      * Solo usar en desarrollo
