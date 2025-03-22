@@ -47,12 +47,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     // Obtener los href del nav
                     let originalHref = link.getAttribute("href");
-                    console.log(originalHref)
+                    console.log("Original: " + originalHref);
 
                     // Modificar segun las diferencias
                     if (originalHref && !originalHref.startsWith("http")) {
-                        let newHref = "../".repeat(depth) + (isLocal ? "" : repoName) + "/" + originalHref;
-                        console.log(newHref)
+                        let ifrepo = (isLocal ? "" : repoName);
+                        let newHref = "../".repeat(depth) + ifrepo + (ifrepo[-1] == "/" ? "" : "/") + originalHref;
+                        console.log("Nuevo: " + newHref);
                         link.setAttribute("href", newHref);
                     }
                 });
