@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
      * Solo usar en desarrollo
      */
     const localPath = (isLocal && local1===window.location.hostname ? local1 : local2);
-    let basePath = (depth > 1 ? "../".repeat(depth) + "src/includes/" : "src/includes/");
+    let basePath = (depth > 1 ? "../".repeat(depth) + "src/includes/" : "/src/includes/");
     basePath = (isLocal ? basePath : repoName + basePath);
 
     console.log("basePath: " + basePath);
