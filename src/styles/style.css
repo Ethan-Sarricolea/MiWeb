@@ -5,6 +5,10 @@ body {
     transition: background-color 1.5s ease, color 1.5s ease;
 }
 
+body.dark-mode pre{
+  background-color: #506578;
+}
+
 /* .navbar {
   position: sticky;
 } */
