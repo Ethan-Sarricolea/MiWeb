@@ -5,9 +5,9 @@ body {
     transition: background-color 1.5s ease, color 1.5s ease;
 }
 
-.navbar {
+/* .navbar {
   position: sticky;
-}
+} */
 
 .in-dev {
   display: grid;
@@ -45,12 +45,23 @@ body.presentation h2{
 
 h1 {
   text-align: center; padding-top: 20px;
-  background-image: url("https://cdn.pixabay.com/photo/2014/05/27/23/32/matrix-356024_1280.jpg");
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  font-size: 100px;
+  color: #ffff;
+  background-image:
+      url("https://cdn.pixabay.com/photo/2014/05/27/23/32/matrix-356024_1280.jpg");
+  /* -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; */
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  font-size: 7rem;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  to{
+    background-position-y: -200;
+  }
 }
 
 .text-box{
@@ -61,7 +72,8 @@ h1 {
 }
 
 body.dark-mode h1{
-  background-image: url("https://cdn.pixabay.com/photo/2022/05/02/22/24/brain-7170502_1280.jpg");
+  background-image:
+          url("https://cdn.pixabay.com/photo/2022/05/02/22/24/brain-7170502_1280.jpg");
 }
 
 /* Typing - escritura */

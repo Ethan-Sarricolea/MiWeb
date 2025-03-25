@@ -11,6 +11,11 @@
         <link rel="stylesheet" href="src/styles/style.css">
     </head>
     <link rel="stylesheet" href="../../styles/style.css">
+    <style>
+        h1{
+            font-size: 3rem;
+        }
+    </style>
     <link id="darkModeCss" rel="stylesheet" href="../../styles/darkmode.css">
         <body>
     
@@ -22,27 +27,9 @@
                 <p class="container" style="padding-top: 30px;">Ultima modificación de proyecto: Marzo 03, 2025</p>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
                 <!-- Secciones y contenido -->
-                <script>
-                    async function loadReadme() {
-                        const url = "https://raw.githubusercontent.com/Ethan-Sarricolea/Files-organizier/refs/heads/master/LEEME.md"; 
-            
-                        try {
-                            const response = await fetch(url);
-                            const content = await response.text();
-            
-                            // Convertir Markdown a HTML
-                            const converter = new showdown.Converter();
-                            document.getElementById("readme").innerHTML = converter.makeHtml(content);
-                        } catch (error) {
-                            console.error("Error cargando el README:", error);
-                            document.getElementById("readme").innerText = `Error cargando la información. ${error}`;
-                        }
-                    }
-            
-                    window.onload = loadReadme;
-                </script>
-
-                <div id="readme" class="container" style="padding-bottom: 30px; padding-top: 30px;">
+                 <script src="../../scripts/loadmd.js" defer></script>
+                <div id="readme" data-imagen-url="https://raw.githubusercontent.com/Ethan-Sarricolea/Files-organizier/refs/heads/master/LEEME.md"
+                class="container" style="padding-bottom: 30px; padding-top: 30px;">
                     Cargando...
                 </div>
 
