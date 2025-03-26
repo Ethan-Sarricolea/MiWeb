@@ -18,7 +18,7 @@ async function loadReadme(link) {
         document.getElementById("readme").innerText = `Error cargando la información. ${error}`;
     }
 
-    
+    hljs.highlightAll();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
